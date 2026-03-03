@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basket Motion MVP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="screen-shell">
+    <div class="hud">
+      <div class="chips">
+        <div class="chip">
+          <div class="label">Stanza</div>
+          <div class="value" id="roomCode">----</div>
+        </div>
+        <div class="chip">
+          <div class="status-row">
+            <span class="dot" id="controllerDot"></span>
+            <div>
+              <div class="label">Controller</div>
+              <div class="value" id="controllerState">Offline</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chips">
+        <div class="chip">
+          <div class="label">Punti</div>
+          <div class="value" id="score">0</div>
+        </div>
+        <div class="chip">
+          <div class="label">Tentativi</div>
+          <div class="value"><span id="made">0</span> / <span id="attempts">0</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brand">Basket Shot</div>
+    <div class="lights"></div>
+    <div class="crowd"></div>
+
+    <div class="backboard"></div>
+    <div class="rim"></div>
+    <div class="net"></div>
+
+    <div class="court">
+      <div class="three-line"></div>
+      <div class="key"></div>
+      <div class="free-throw"></div>
+    </div>
+
+    <div class="ball-shadow" id="ballShadow"></div>
+    <div class="ball" id="ball"></div>
+
+    <aside class="qr-card">
+      <h3>Collega il controller</h3>
+      <p>Inquadra il QR con il telefono per aprire il controller nella stanza corretta.</p>
+      <div class="qr-box" id="qrBox"></div>
+      <a class="qr-link" id="controllerUrl" href="#" target="_blank" rel="noopener noreferrer"></a>
+    </aside>
+
+    <div class="controls">
+      <button class="small ghost" id="newRoomBtn">Nuova stanza</button>
+      <button class="small ghost" id="resetScoreBtn">Reset punteggio</button>
+    </div>
+
+    <div class="toast" id="toast"><strong>Inquadra il QR</strong> per usare il telefono come controller.</div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script type="module" src="screen.js"></script>
+</body>
+</html>

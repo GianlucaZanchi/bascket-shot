@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Basket Controller</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="controller-body">
+  <main class="controller-card">
+    <div class="controller-head">
+      <h1 class="controller-title">Controller</h1>
+      <div class="room-pill" id="roomPill">ROOM ----</div>
+    </div>
+    <p class="controller-sub">
+      Tieni il telefono in mano come una palla. Puoi lanciare con il <strong>gesto del braccio</strong> oppure fare uno <strong>swipe verso l’alto</strong> sulla palla.
+    </p>
+
+    <div class="controller-actions">
+      <button id="enableMotionBtn">Abilita sensori</button>
+      <button class="ghost" id="testShotBtn">Tiro demo</button>
+    </div>
+
+    <section class="controller-ball-zone" id="ballZone">
+      <div class="controller-ball" id="controllerBall"></div>
+      <div class="drag-tip">
+        Swipe verso l’alto per tirare. Più vai veloce, più aumenta la potenza. Se inclini o muovi lateralmente, cambi la direzione.
+      </div>
+    </section>
+
+    <div class="metric-grid">
+      <div class="metric">
+        <div class="k">Potenza</div>
+        <div class="v" id="powerMetric">0.00</div>
+      </div>
+      <div class="metric">
+        <div class="k">Direzione</div>
+        <div class="v" id="directionMetric">0.00</div>
+      </div>
+      <div class="metric">
+        <div class="k">Arco</div>
+        <div class="v" id="arcMetric">0.00</div>
+      </div>
+    </div>
+
+    <p class="footer-note" id="statusText">Pronto a collegarti...</p>
+  </main>
+
+  <script type="module" src="controller.js"></script>
+</body>
+</html>
